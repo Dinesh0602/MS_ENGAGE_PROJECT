@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/logo.png">
+  <title>Face Recognition</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="/CSS/missingppl.css">
+</head>
+
+<body>
+  <!--  Navbar  -->
+  <ul>
+    <li><a href='home.html'>Home</a></li>
+    <li><a href='image.html'>Image</a></li>
+    <li><a href='video.html'>Video</a></li>
+    <li><a href='webcam.html'>Webcam</a></li>
+    <li style="float:right"><a id="signoutbtn" type="button" style="color: white;">Sign Out</a></li>
+  </ul>
+   <!------------->
+
+<!--Input form -->
+  <div class="row">
+    <div class="col-4 col-md-6 offset-md-3">
+      <form method="POST" class="needs-validation col-lg-8" id="search"  autocomplete="off">
+        <div class="mb-2">
+          <label class="mb-2  " for="name" style="color: black;">Enter Name</label>
+          <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+        </div>
+        <button   class="btn btn-success">Search </button>
+      </form>
+    </div>
+  </div>
+  <p id="displayinfo">Nothing to Display</p>
+<!--To display searched persons image-->
+  <div class=" mt-5" id="row">
+
+  </div>
+  <!--JavaScript-->
+  <script type="module" src="/JavaScript/missingppl.js"></script>
+</body>
+
+</html>

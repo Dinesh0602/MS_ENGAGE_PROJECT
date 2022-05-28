@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <title>Face Recognition</title>
+    <script defer src="/JavaScript/face-api.min.js"></script>
+    <link rel="stylesheet" href="/CSS/webcam.css">
+</head>
+<body>
+    <!--   Navbar  -->
+    <ul>
+        <li><a onclick="window.location.href='home.html'">Home</a></li>
+        <li><a href='image.html'>Image</a></li>
+        <li><a href='video.html'>Video</a></li>
+        <li><a href='webcam.html'>Webcam</a></li>
+        <li style="float:right"><a id="signoutbtn" type="button">Sign Out</a></li>
+    </ul>
+    <!--------------->
+    <br>
+    <!--For choosing model-->
+    <div style="display: inline;" class="box">
+        <label for="choosemodel">Choose Model:</label>
+        <select id="choosemodel">
+            <option value="tinyFaceDetector" selected>Tiny Face Detector Model</option>
+            <option value="ssdMobilNetv1">SSD Mobilenet V1</option>
+        </select>
+    </div>
+    <!----------------------->
+    <br>
+    <!--Media div to display the webcam video-->
+    <div id="media">
+        <video id="video" controls autoplay></video>
+    </div>
+    <!------------------------------------------>
+    <p style="margin-left: 20px; margin-bottom: 0px;">In brackets it displays the best similarity percentage among the faces in database</p>
+    <br>
+
+    <!--Pause and resume button-->
+    <button id="pauseresumebtn" type="button">Pause &#9208;</button>
+    <!--------------------------->
+    
+    <!--Prealoader-->
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        Please wait models are loading...
+    </div>
+    <!-------------->
+
+    <!--JavaScript-->
+    <script defer type="module" src="/JavaScript/webcam.js"></script>
+</body>
+</html>

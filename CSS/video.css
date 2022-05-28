@@ -1,0 +1,183 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #E8EBEF;
+    width:100%
+  }
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+    }
+    .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+    }
+    @keyframes loader {
+      0% { transform: rotate(0deg);}
+      25% { transform: rotate(180deg);}
+      50% { transform: rotate(180deg);}
+      75% { transform: rotate(360deg);}
+      100% { transform: rotate(360deg);}
+      }
+      
+      @keyframes loader-inner {
+      0% { height: 0%;}
+      25% { height: 0%;}
+      50% { height: 100%;}
+      75% { height: 100%;}
+      100% { height: 0%;}
+      }    
+  #media {
+    margin: 20px;
+    padding: 0;
+  width:70%;
+   position: relative;
+}
+#media video{
+    max-width:100%;
+    max-height: 100%;
+}
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    overflow: hidden;
+   background-image:linear-gradient(to right,rgb(76, 21, 79), rgb(33, 9, 78),rgb(20, 20, 70), rgb(9, 9, 78), rgb(8, 8, 51), rgb(7, 7, 41), rgb(7, 7, 41), rgb(8, 8, 51),rgb(9, 9, 78),rgb(33, 9, 78),rgb(25, 4, 63));
+  }  
+  li{
+    float: left;
+  }  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    margin:14px;
+    padding: 4px 6px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid white;
+   border-radius: 5px;
+  }   
+  @media screen and (max-width:422px){
+    li a{
+       margin:5px;
+     }
+   }
+
+
+
+
+
+
+.custom-file-input {
+    color: transparent;
+    max-width: 140px;
+  }
+  .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Select a video file';
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active {
+    outline: 0;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+  }
+
+
+  .box {
+    position: relative;
+  }
+  
+  .box select {
+    background-color: #1087d7;
+    color: white;
+    padding: 2px;
+    width: 250px;
+    border: none;
+    font-size: 17px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .box::before {
+    content: "\f13a";
+    font-family: FontAwesome;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 17px;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .box select option {
+    padding: 20px;
+  }
+
+  #pauseresumebtn{
+    margin:10px 20px;
+  width: 120px;
+  border-radius: 5px;
+  cursor: pointer;
+  }

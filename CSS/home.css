@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to right,
+    rgb(76, 21, 79),
+    rgb(33, 9, 78),
+    rgb(20, 20, 70),
+    rgb(9, 9, 78),
+    rgb(8, 8, 51),
+    rgb(7, 7, 41),
+    rgb(7, 7, 41),
+    rgb(8, 8, 51),
+    rgb(9, 9, 78),
+    rgb(33, 9, 78),
+    rgb(25, 4, 63)
+  );
+}
+/*Headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat-Bold";
+}
+h1.big-heading {
+  text-align: left;
+  color: #fff;
+  margin-top: 70px;
+}
+.big-heading {
+  font-family: "Share Tech", sans-serif;
+  size: 5.5rem;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 4rem;
+}
+.user-heading {
+  font-size: 3rem;
+  color: #fff;
+}
+.section-heading {
+  font-size: 1.5rem;
+  line-height: 3em;
+  text-align: left;
+  color: #fff;
+}
+.small-heading {
+  color: #fff;
+  font-size: 1.5rem;
+}
+/*Navigation Bar*/
+img.logo {
+  height: 85px;
+  width: 90px;
+  margin-left: -21px;
+  padding: 0 10px 0 0;
+  margin-top: -15px;
+}
+.navbar {
+  padding: 0 0 4.5rem;
+}
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-item {
+  padding: 0 10px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+.signin-btn {
+  padding: 6px 16px;
+}
+/**containers**/
+.container {
+  padding-bottom: 7%;
+}
+.container-fluid {
+  padding: 7% 15%;
+}
+.container-nav {
+  padding: 4% 15%;
+}
+/*astronaut*/
+.pos-img-1 {
+  padding-bottom: 26px;
+  margin-right: -185px;
+  margin-bottom: -31px;
+  margin-left: -300px;
+  width: 111%;
+  bottom: 303px;
+  margin-top: -91px;
+}
+/*form*/
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(19, 2, 63, 0),
+    rgba(113, 100, 146, 0),
+    rgba(19, 2, 63, 0)
+  );
+}
+.label {
+  color: #fff;
+  text-align: left;
+}
+/*footer*/
+.footer {
+  background-color: #E8EBEF;
+}
+.social-sec {
+  padding: 5px;
+}
+.social-icons {
+  color: rgb(20, 20, 70);
+}
+.social-icons:hover {
+  color: rgb(79, 79, 175);
+}
+/*explore page*/
+/*profiles-sec*/
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-linear-gradient(
+    left,
+    rgb(7, 7, 41),
+    rgb(79, 79, 175),
+    rgb(7, 7, 41)
+  );
+  background-image: -moz-linear-gradient(
+    left,
+    rgb(7, 7, 41),
+    rgb(79, 79, 175),
+    rgb(8, 8, 51)
+  );
+  background-image: -ms-linear-gradient(
+    left,
+    rgb(7, 7, 41),
+    rgb(79, 79, 175),
+    rgb(9, 9, 78)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgb(7, 7, 41),
+    rgb(79, 79, 175),
+    rgb(20, 20, 70)
+  );
+}
+.icons {
+  color: #fff;
+}
+.users {
+  padding: 5%;
+}
+/*login page*/
+/*astronaut*/
+.pos-img-2 {
+  margin-right: -185px;
+  margin-top: 45px;
+}
+/*profile page*/
+.icons-profile {
+  color: #fff;
+  padding: 0 5% 0 0;
+}
+.profile-data {
+  text-align: right;
+}
+@media (max-width: 1028px) {
+  .pos-btn {
+    display: inline-flex;
+    left: 0;
+  }
+  .pos-img-1 {
+    position: static;
+    margin-left: -200px;
+    padding-right: 0;
+    padding-top: 90px;
+  }
+  hr .style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(
+      left,
+      rgb(7, 7, 41),
+      rgb(79, 79, 175),
+      rgb(7, 7, 41)
+    );
+    background-image: -moz-linear-gradient(
+      left,
+      rgb(7, 7, 41),
+      rgb(79, 79, 175),
+      rgb(7, 7, 41)
+    );
+    background-image: -ms-linear-gradient(
+      left,
+      rgb(7, 7, 41),
+      rgb(79, 79, 175),
+      rgb(7, 7, 41)
+    );
+    background-image: -o-linear-gradient(
+      left,
+      rgb(7, 7, 41),
+      rgb(79, 79, 175),
+      rgb(7, 7, 41)
+    );
+  }
+  .profile-data {
+    text-align: center;
+  }
+  h1.big-heading {
+    text-align: center;
+    color: #fff;
+    margin-top: 70px;
+    font-size: 3rem;
+  }
+}

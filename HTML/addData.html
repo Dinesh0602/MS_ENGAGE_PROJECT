@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png"> <title>Face Recognition</title>
+    <!--Font Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/CSS/addData.css">
+    <!--Face API-->
+    <script defer src="/JavaScript/face-api.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button id="backbtn" onclick="window.location='home.html'" type="button">Home</button>
+        <button id="signoutbtn" type="button">Sign Out</button>
+        <label id="entername" for="name">Enter FullName</label>
+        <input onkeypress="return event.charCode != 32" autocomplete="off" placeholder="Enter name"
+            style="position: relative;" type="text" id="name">
+        <input type="file" id="file-input" accept="image/png, image/jpeg" multiple>
+        <label id="chosephoto" for="file-input">
+            <i class="fas fa-upload"></i> &nbsp; Choose A Photo
+        </label>
+        <p id="num-of-files">No Files Chosen</p>
+        <div id="images"></div>
+        <button id="addbtn" type="button">ADD DATA</button>
+    </div>
+
+     <!-- Preloader -->
+    <div class="loader-wrapper" id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        Please wait models are loading...
+      </div>
+    <!---------------->
+    
+    <!--Script-->
+    <script type="module" src="/JavaScript/addData.js"></script>
+</body>
+
+</html>

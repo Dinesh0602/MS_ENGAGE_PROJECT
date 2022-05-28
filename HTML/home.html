@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/logo.png"> <title>Face Recognition</title>
+
+  <!-------------------------css bootstrap cdn------------------------>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!---------------------------css stylesheet------------------------------->
+  <link rel="stylesheet" href="/CSS/home.css">
+  <link rel="icon" href="/images/logo.png" />
+    <!------------------jquery/js bootstrap cdn---------------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-nav" id="home">
+    <!-- Nav Bar -->
+    <nav class="navbar  navbar-expand-lg navbar-dark">
+      <p class="navbar-brand" href="index.html"><img src="/images/logo.png" class="logo">Face Recognition App</p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/HTML/missingppl.html">Missing people</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/HTML/found.html">Found people</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/HTML/image.html">Image</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/HTML/video.html">Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/HTML/webcam.html">Webcam</a>
+          </li>
+          <li class="nav-item" id="signoutbtn" type="button">
+            <a class="nav-link" type="button">Sign Out</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Navbar -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="/images/My project.png" class="pos-img-1">
+      </div>
+      <form class="col-lg-6">
+        <div class="form-group">
+          <h1 class="big-heading">Face Recognition App</h1>
+          <hr class="style-two">
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!--Admin features-->
+  <div class="container " id="ifadmindisplay" hidden>
+    <div class="row justify-content-around">
+      <div class="col-4">
+          <form method="POST" class="needs-validation col-lg-10" id="addadminform" autocomplete="off">
+            <div class="mb-2">
+              <label class="mb-2" for="email" style="color: white;">E-Mail Address</label>
+              <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+            </div>
+            <button id="addnewadminbtn" type="submit" class="btn btn-success">Add Admin</button>
+          </form>
+      </div>
+
+      <div class="col-4">
+        <div style="margin-left: 0;" id="removedata">
+          <form method="POST" class="needs-validation col-lg-10" id="removedataform" autocomplete="off">
+            <div class="mb-2">
+              <label class="mb-2" for="name" style="color: white;">Enter Name</label>
+              <input id="name" type="text" placeholder="Enter Name of the person found" autocomplete="off"
+                onkeypress="return event.charCode != 32" class="form-control" name="name" value="" required autofocus>
+            </div>
+            <button id="removedatabtn" type="submit" class="btn btn-success">Remove Data</button>
+
+          </form>
+          <br>
+        </div>
+
+      </div>
+
+    </div>
+    <button id="adddatabtn" type="button" class="btn btn-success mt-30" style="margin-top: 20px;">Add Data</button>
+    <button id="removedatabyimagebtn" type="button" class="btn btn-success mt-30" style="margin-top: 20px;">Remove Data
+      by image</button>
+  </div>
+
+
+
+
+  <!-----footer---->
+  <footer class="footer" id="contact">
+    <div class="container-fluid">
+      <a href="" class="social-icons"><i class="social-sec fab fa-facebook"></i></a>
+      <a href="" class="social-icons"><i class="social-sec fab fa-twitter"></i></a>
+      <a href="" class="social-icons"><i class="social-sec fab fa-instagram"></i></a>
+      <a href="" class="social-icons"><i class="social-sec fas fa-envelope"></i></a>
+      <p>© Copyright 2022 Face Recognition App</p>
+    </div>
+  </footer>
+
+
+  <!---Javascript-->
+  <script defer type="module" src="/JavaScript/home.js"></script>
+</body>
+
+</html>

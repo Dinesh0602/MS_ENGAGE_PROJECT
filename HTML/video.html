@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/logo.png">
+  <title>Face Recognition</title>
+  <script defer src="/JavaScript/face-api.min.js"></script>
+  <link rel="stylesheet" href="/CSS/video.css">
+</head>
+
+<body>
+  <!--  Navbar  -->
+  <ul>
+    <li><a href='home.html'>Home</a></li>
+    <li><a href='image.html'>Image</a></li>
+    <li><a href='video.html'>Video</a></li>
+    <li><a href='webcam.html'>Webcam</a></li>
+    <li style="float:right"><a id="signoutbtn" type="button">Sign Out</a></li>
+  </ul>
+  <!-------------->
+
+  <!--Media div to display video-->
+  <div id="media"><video controls autoplay id="myvideo" style="display: inherit;">
+    </video></div>
+  <!------------------------------>
+  <p style="margin-left: 20px;">In brackets it displays the best similarity percentage among the faces in database</p>
+  <br>
+
+  <!--Select video, model and click button to start displaying video-->
+  <div style="display: inline;" class="box">
+    <input type="file" accept="vedio/mov vedio/mkv vedio/mp4" class="custom-file-input" id="videoinput">
+    <select id="choosemodel">
+      <option value="tinyFaceDetector" selected>Tiny Face Detector Model</option>
+      <option value="ssdMobilNetv1">SSD Mobilenet V1</option>
+    </select>
+    <button type="button" id="videouploadbtn"
+      style="margin: 0px auto auto 20px; background-color: #49DF24;color:white;width: 80px;font-weight: bolder;border: 0ch;cursor: pointer;padding: 5px">
+      Upload video
+    </button>
+  </div>
+  <!-------------------------------------------------------------------->
+  <br>
+  
+  <!--Pause and resume button-->
+  <button id="pauseresumebtn" type="button">Pause &#9208;</button>
+  <!--------------------------->
+
+  <!-- Preloader -->
+  <div class="loader-wrapper" id="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+    Please wait models are loading...
+  </div>
+  <!--------------->
+
+  <!-- JavaScript -->
+  <script defer type="module" src="/JavaScript/video.js"></script>
+</body>
+</html>
