@@ -136,7 +136,7 @@ async function gatherdata() {
       detections.push(detection);
 
     // Return the function if any image of the uploaded images contain multiple faces or no face.
-      if (detection.length != 1) {
+      if (detection.length != 1&&detection2.length!=1) {
         alert("Please upload images with single face");
         return;
       }
