@@ -28,11 +28,11 @@ Can also be used in mobiles.
 ## Use Admin account to access complete features of my project
 
 ### Admin Account details :- 
-mail:- msengage2022dinesh@gmail.com
-password:- password
+Email:- msengage2022dinesh@gmail.com
+Password:- password
 
 ### 2nd Admin account :- 
- mail:- msengage2022dinesh1@gmail.com
- password:- password
+ Email:- msengage2022dinesh1@gmail.com
+ Password:- password
  
  
