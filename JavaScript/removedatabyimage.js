@@ -153,25 +153,12 @@ async function gatherdata() {
       detection2[0].descriptor
     );
     // Delete the doc in both the models if the distance is less than 0.5 
-    if (matchedimagefacefortinymodel.distance < 0.5) {
+  if (matchedimagefacefortinymodel.distance < 0.5&&matchedimagefaceforssdmodel.distance < 0.5) {
+      let nameInLowerCase = matchedimagefacefortinymodel.label.toLowerCase();
       try {
-        let nameInLowerCase = matchedimagefacefortinymodel.label.toLowerCase();
-        await deleteDoc(doc(db, "facesfortinymodel", nameInLowerCase));
-      } catch (e) {
-        alert("There is some error encountered, please try again");
-        console.log(e);
-      }
-    
-    if (matchedimagefaceforssdmodel.distance < 0.5) {
-      let nameInLowerCase = matchedimagefaceforssdmodel.label.toLowerCase();
-      try {
-        
         await deleteDoc(doc(db, "facesforssdmodel", nameInLowerCase));
-      } catch (e) {
-        alert("There is some error encountered, please try again");
-        console.log(e);
-      }
-      // Delete image related to this person  from firebase storage
+        await deleteDoc(doc(db, "facesfortinymodel", nameInLowerCase));
+        // Delete image related to this person  from firebase storage
       Ref=ref(storage, 'images/'+nameInLowerCase);
       await deleteObject(Ref).then(() => {
         imageContainer.innerHTML = "";
@@ -180,7 +167,12 @@ async function gatherdata() {
         alert("Successfull!");
       });
       //////////////////////////////////////////////////////////////
-    }}
+      } catch (e) {
+        alert("There is some error encountered, please try again");
+       
+      }
+      
+    }
     else{
       imageContainer.innerHTML = "";
         numOfFiles.textContent = `0 Files Selected`;
